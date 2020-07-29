@@ -46,8 +46,6 @@ export const videoPlayerInit = () => {
     videoProgress.addEventListener("change", () => {
         const duration = videoPlayer.duration;
         const value = videoProgress.value;
-        let currentTime = videoPlayer.currentTime;
-        currentTime = (value * duration) / 100;
-        
+        videoPlayer.currentTime = (value * duration) / 100;
     });
 };
